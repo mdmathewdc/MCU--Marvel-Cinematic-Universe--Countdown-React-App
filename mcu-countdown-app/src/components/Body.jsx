@@ -11,6 +11,7 @@ const Body = () => {
         })
         .then((data) => {
           setData(JSON.stringify(data));
+          console.log(data);
         });
     };
     fetchData();
