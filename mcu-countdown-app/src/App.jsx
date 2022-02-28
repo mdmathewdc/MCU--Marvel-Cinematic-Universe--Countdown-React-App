@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { Body } from './components';
 
 const App = () => {
   return (
     <AppDiv className="App">
-      <h1>Hello</h1>
+      <Body />
     </AppDiv>
   );
 }
