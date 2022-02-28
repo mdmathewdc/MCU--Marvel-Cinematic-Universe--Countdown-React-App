@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import { Body } from './components';
+import { Body, Header } from './components';
 
 const App = () => {
   return (
-    <AppDiv className="App">
+    <AppContainer className="App">
+      <Header />
       <Body />
-    </AppDiv>
+    </AppContainer>
   );
 }
 
-const AppDiv = styled.div `
-  background-color: red;
-  text-align: center;
+const AppContainer = styled.div `
+  margin: 0 auto;
 `
 export default App;
