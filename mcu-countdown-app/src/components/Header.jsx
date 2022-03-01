@@ -11,7 +11,7 @@ const Header = () => {
 
 const HeaderContainer = styled.div`
   height: 50px;
-  background-color: #161b22;
+  background-color: #020001;
 `;
 const HeaderLogo = styled.img`
   height: 50px;

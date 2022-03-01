@@ -5,7 +5,7 @@ const Body = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     const fetchData = () => {
-      fetch("https://www.whenisthenextmcufilm.com/api?date=2022-05-03XXXXX")
+      fetch("https://www.whenisthenextmcufilm.com/api?date=2022-05-03")
         .then((response) => {
           return response.json();
         })
