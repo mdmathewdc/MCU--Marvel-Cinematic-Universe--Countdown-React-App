@@ -13,6 +13,7 @@ const StyledButton = styled.button`
   font-size: 15px;
   font-weight: 900;
   font-family: "Poppins";
+  display: block;
 
   &:hover {
     background-color: #fb0208;

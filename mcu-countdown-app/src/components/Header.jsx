@@ -14,6 +14,7 @@ const HeaderContainer = styled.header`
   display: flex;
   height: 56px;
   background-color: #020001;
+  justify-content: center;
 
   h1 {
     color: white;

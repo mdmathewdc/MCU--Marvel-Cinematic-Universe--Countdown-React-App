@@ -20,7 +20,7 @@ const Body = () => {
 
   return (
     <BodyContainer>
-      {data}
+      <p>{data}</p>
       <Button />
     </BodyContainer>
   );
