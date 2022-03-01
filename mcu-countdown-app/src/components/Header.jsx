@@ -11,7 +11,6 @@ const Header = () => {
 };
 
 const HeaderContainer = styled.header`
-
   display: flex;
   height: 56px;
   background-color: #020001;

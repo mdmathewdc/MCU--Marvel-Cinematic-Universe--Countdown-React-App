@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { Button } from ".";
 
 const Body = () => {
   const [data, setData] = useState(null);
@@ -17,7 +18,12 @@ const Body = () => {
     fetchData();
   }, []);
 
-  return <BodyContainer>{data}</BodyContainer>;
+  return (
+    <BodyContainer>
+      {data}
+      <Button />
+    </BodyContainer>
+  );
 };
 
 const BodyContainer = styled.div`
