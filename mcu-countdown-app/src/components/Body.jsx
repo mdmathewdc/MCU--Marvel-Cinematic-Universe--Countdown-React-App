@@ -54,6 +54,7 @@ const Body = () => {
 
   return (
     <BodyContainer>
+      <h1><span>{daysUntil}</span> DAYS</h1>
       <p>{data}</p>
       <Button />
     </BodyContainer>
@@ -64,6 +65,16 @@ const BodyContainer = styled.div`
   background-color: #202124;
   height: 100vh;
   color: white;
+
+  h1 {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    text-align: center;
+  }
+
+  h1 span {
+    font-size: 65px;
+  }
 `;
 
 export default Body;
