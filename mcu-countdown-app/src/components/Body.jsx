@@ -73,7 +73,8 @@ const BodyContainer = styled.div`
   }
 
   h1 span {
-    font-size: 65px;
+    font-size: 75px;
+    color: red;
   }
 `;
 
