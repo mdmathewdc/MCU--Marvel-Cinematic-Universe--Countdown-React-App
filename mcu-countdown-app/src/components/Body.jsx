@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { useEffect, useState } from "react";
 
 const Body = () => {
@@ -16,7 +17,13 @@ const Body = () => {
     fetchData();
   }, []);
 
-  return <div>{data}</div>;
+  return <BodyContainer>{data}</BodyContainer>;
 };
+
+const BodyContainer = styled.div`
+  background-color: #202124;
+  height: 100vh;
+  color: white;
+`;
 
 export default Body;
