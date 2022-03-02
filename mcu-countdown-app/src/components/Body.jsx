@@ -54,7 +54,7 @@ const Body = () => {
 
   return (
     <BodyContainer>
-      <h1><span>{daysUntil}</span> DAYS</h1>
+      <h1><span>{daysUntil}</span> DAYsS</h1>
       <p>{data}</p>
       <Button />
     </BodyContainer>
@@ -65,6 +65,10 @@ const BodyContainer = styled.div`
   background-color: #202124;
   height: 100vh;
   color: white;
+
+  p {
+    overflow-wrap: break-word;
+  }
 
   h1 {
     font-family: 'Kanit', sans-serif;
