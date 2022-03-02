@@ -11,13 +11,13 @@ const Header = () => {
 
 const HeaderContainer = styled.header`
   display: flex;
-  height: 11.5vh;
+  height: 72px;
   background-color: #020001;
   justify-content: center;
 `;
 const HeaderLogo = styled.img`
-  height: 50px;
-  margin: 10px 0;
+  height: 48px;
+  margin: 12px 0;
   position: sticky;
   top: 0;
 `;

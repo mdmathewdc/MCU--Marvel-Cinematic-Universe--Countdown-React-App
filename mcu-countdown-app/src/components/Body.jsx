@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { Button } from ".";
+import { formatDate } from "../utils/date";
 
 const Body = () => {
 
@@ -36,7 +37,7 @@ const Body = () => {
           setPoster(data.poster_url);
           setTitle(data.title);
           setOverview(data.overview);
-          setReleaseDate(data.release_date);
+          setReleaseDate(formatDate(data.release_date));
           setMediaType(data.type);
 
           // Next details
@@ -54,10 +55,14 @@ const Body = () => {
 
   return (
     <BodyContainer>
+      <h2>{title}</h2>
       <h1><span>{daysUntil}</span> DAYS</h1>
       <img src={poster} alt={title} />
+      <h3>Release Date: {releaseDate}</h3>
+      <p>{overview}</p>
 
-      <p>{data}</p>
+
+      {/* <p>{data}</p> */}
       <Button />
     </BodyContainer>
   );
@@ -68,27 +73,44 @@ const BodyContainer = styled.main`
   flex-direction: column;
   align-items: center;
   background-color: #202124;
-  height: 89.5vh;
   color: white;
 
   p {
     word-break: break-word;
+    margin: 0 10px;
+    width: 90%;
+    font-family: "Poppins";
   }
 
   h1 {
     font-family: 'Kanit', sans-serif;
     margin: 0;
     text-align: center;
-    line-height: 1.3;
+    line-height: 1;
   }
 
   h1 span {
     font-size: 75px;
     color: #f04a49;
+    line-height: 0.8;
   }
 
   img {
     height: 300px;
+    margin: 10px 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-size: 20px;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-weight: 200;
+    font-size: 18px;
   }
 `;
 

@@ -15,6 +15,7 @@ const StyledButton = styled.button`
   font-family: "Poppins";
   display: block;
   border: 1px solid red;
+  margin: 20px;
 
   &:hover, :active {
     background-color: #fb0208;
