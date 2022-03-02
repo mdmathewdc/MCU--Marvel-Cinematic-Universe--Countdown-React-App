@@ -26,6 +26,9 @@ const Body = () => {
         setOverview(data.overview);
         setReleaseDate(data.release_date);
         setMediaType(data.type);
+        if(Object.keys(data.following_production).length === 0 ) {
+          setReleaseDate(null);
+        }
       });
   };
 
