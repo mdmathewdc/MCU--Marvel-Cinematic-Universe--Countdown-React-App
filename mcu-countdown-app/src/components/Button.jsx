@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = () => {
-  return <StyledButton>What's next?</StyledButton>;
+const Button = ({clickAction}) => {
+  const buttonText = "What's Next?";
+  return <StyledButton onClick={clickAction}>{buttonText}</StyledButton>;
 };
 
 const StyledButton = styled.button`
