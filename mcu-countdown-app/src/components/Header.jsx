@@ -5,27 +5,19 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderLogo src="/marvel-logo.png" alt="logo" />
-      <h1>Countdown App</h1>
     </HeaderContainer>
   );
 };
 
 const HeaderContainer = styled.header`
   display: flex;
-  height: 56px;
+  height: 11.5vh;
   background-color: #020001;
   justify-content: center;
-
-  h1 {
-    color: white;
-    font-family:'Poppins', sans-serif;
-    font-size: 20px;
-    margin-left: 5px;
-  }
 `;
 const HeaderLogo = styled.img`
   height: 50px;
-  margin-top: 3px;
+  margin: 10px 0;
   position: sticky;
   top: 0;
 `;

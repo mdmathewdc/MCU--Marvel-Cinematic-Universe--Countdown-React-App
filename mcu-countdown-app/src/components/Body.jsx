@@ -54,31 +54,41 @@ const Body = () => {
 
   return (
     <BodyContainer>
-      <h1><span>{daysUntil}</span> DAYsS</h1>
+      <h1><span>{daysUntil}</span> DAYS</h1>
+      <img src={poster} alt={title} />
+
       <p>{data}</p>
       <Button />
     </BodyContainer>
   );
 };
 
-const BodyContainer = styled.div`
+const BodyContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #202124;
-  height: 100vh;
+  height: 89.5vh;
   color: white;
 
   p {
-    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   h1 {
     font-family: 'Kanit', sans-serif;
     margin: 0;
     text-align: center;
+    line-height: 1.3;
   }
 
   h1 span {
     font-size: 75px;
-    color: red;
+    color: #f04a49;
+  }
+
+  img {
+    height: 300px;
   }
 `;
 
