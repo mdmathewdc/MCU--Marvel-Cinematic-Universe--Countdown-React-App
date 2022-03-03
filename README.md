@@ -1,4 +1,4 @@
-# Next-Marvel-Movie-Countdown-React-App
+# Marvel Movie Countdown React App
 
 https://mcucountdown.netlify.app/
 
