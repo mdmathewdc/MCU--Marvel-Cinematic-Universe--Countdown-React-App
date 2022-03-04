@@ -50,6 +50,9 @@ const Body = () => {
         <div className="day">
           <h1>{daysUntil}</h1> <p>DAYS</p>
         </div>
+        <div className="poster_mob">
+          <img src={poster} alt={title} />
+        </div>
         <h3>Releasing on: {formatDate(releaseDate)}</h3>
         <span className="release-type">{mediaType}</span>
         <p>{overview}</p>
@@ -117,6 +120,9 @@ const BodyContainer = styled.main`
     border: 1px solid white;
     border-radius: 4px;
   }
+  .poster_mob {
+    display: none;
+  }
   @media only screen and (max-width: 567px) {
     flex-direction: column;
     .poster,
@@ -124,9 +130,14 @@ const BodyContainer = styled.main`
       max-width: 90%;
     }
     .poster {
+      display: none;
       margin: 3rem 0;
     }
+    .poster_mob {
+      display: block;
+    }
     .info {
+      margin-top: 3rem;
       text-align: center;
     }
   }
