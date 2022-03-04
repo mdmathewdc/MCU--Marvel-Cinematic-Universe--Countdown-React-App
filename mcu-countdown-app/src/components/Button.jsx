@@ -37,8 +37,7 @@ const ActionButton = styled.button`
   transition: 0.3s;
   cursor: pointer;
   position: relative;
-  display: block;
-  margin: 20px;
+  margin: 1rem 0;
 
   &:hover {
     background-color: #fb0208;
@@ -74,6 +73,10 @@ const ActionButton = styled.button`
 
   &.loading::after {
     opacity: 1;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+    margin-bottom: 4rem;
   }
 `;
 
