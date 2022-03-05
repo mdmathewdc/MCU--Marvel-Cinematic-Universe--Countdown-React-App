@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { Button } from ".";
+import { Button, Loader } from ".";
 import { formatDate } from "../utils/date";
 
 const Body = () => {
-
   /* Current Movie/TV-Series Details */
   const [daysUntil, setDaysUntil] = useState(null);
   const [poster, setPoster] = useState(null);
@@ -26,7 +25,7 @@ const Body = () => {
         setOverview(data.overview);
         setReleaseDate(data.release_date);
         setMediaType(data.type);
-        if(Object.keys(data.following_production).length === 0 ) {
+        if (Object.keys(data.following_production).length === 0) {
           setReleaseDate(null);
         }
       });
@@ -40,26 +39,37 @@ const Body = () => {
     fetchData();
   };
 
-  return (
-    <BodyContainer>
-      <h2>{title}</h2>
-      <h1>
-        <span>{daysUntil}</span> DAYS
-      </h1>
-      <img src={poster} alt={title} />
-      <h3>Release Date: {formatDate(releaseDate)} ({mediaType})</h3>
-      <p>{overview}</p>
-      <Button clickAction={handleClick} />
-    </BodyContainer>
-  );
+  const BodyComponent = () => {
+    return (
+      <BodyContainer>
+        <h2>{title}</h2>
+        <h1>
+          <span>{daysUntil}</span> DAYS
+        </h1>
+        <img src={poster} alt={title} />
+        <h3>
+          Releasing on: {formatDate(releaseDate)}
+          <span className="media-type">{mediaType}</span>
+        </h3>
+        <p>{overview}</p>
+        <Button clickAction={handleClick} />
+      </BodyContainer>
+    );
+  };
+
+  return (title ? <BodyComponent /> : <Loader/>);
 };
 
 const BodyContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #202124;
+  background-color: black;
   color: white;
+
+  &::before {
+    filter: blur(5px);
+  }
 
   p {
     word-break: break-word;
@@ -98,6 +108,18 @@ const BodyContainer = styled.main`
     margin-top: 0;
     font-weight: 200;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .media-type {
+    margin-left: 7px;
+    font-family: "Poppins";
+    display: inline-block;
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 12px;
   }
 `;
 
