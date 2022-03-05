@@ -12,7 +12,7 @@ const Loader = () => {
 
 const StyledLoader = styled.div`
   display: flex;
-  margin-top: 50%;
+  margin-top: 50vh;
   justify-content: center;
   align-items: center;
 

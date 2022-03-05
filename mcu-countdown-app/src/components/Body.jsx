@@ -12,9 +12,16 @@ const Body = () => {
   const [overview, setOverview] = useState(null);
   const [releaseDate, setReleaseDate] = useState(null);
   const [mediaType, setMediaType] = useState(null);
+  const [nextRelease, setNextRelease] = useState(null);
 
   const fetchData = () => {
-    fetch(`https://www.whenisthenextmcufilm.com/api?date=${releaseDate}`)
+    fetch(
+      `https://www.whenisthenextmcufilm.com/api?date=${
+        nextRelease && Object.keys(nextRelease).length === 0
+          ? null
+          : releaseDate
+      }`
+    )
       .then((response) => {
         return response.json();
       })
@@ -25,9 +32,7 @@ const Body = () => {
         setOverview(data.overview);
         setReleaseDate(data.release_date);
         setMediaType(data.type);
-        if (Object.keys(data.following_production).length === 0) {
-          setReleaseDate(null);
-        }
+        setNextRelease(data.following_production);
       });
   };
 
@@ -57,7 +62,7 @@ const Body = () => {
     );
   };
 
-  return (title ? <BodyComponent /> : <Loader/>);
+  return title ? <BodyComponent /> : <Loader />;
 };
 
 const BodyContainer = styled.main`
