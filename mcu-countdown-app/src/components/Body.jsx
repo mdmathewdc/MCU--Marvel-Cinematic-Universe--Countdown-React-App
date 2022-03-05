@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { Button, Loader } from ".";
+import { Button, Loader, Footer } from ".";
 import { formatDate } from "../utils/date";
 
 const Body = () => {
@@ -58,6 +58,7 @@ const Body = () => {
         </h3>
         <p>{overview}</p>
         <Button clickAction={handleClick} />
+        <Footer />
       </BodyContainer>
     );
   };
