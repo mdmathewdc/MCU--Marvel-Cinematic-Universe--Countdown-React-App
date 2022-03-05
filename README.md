@@ -1,4 +1,4 @@
-# Marvel Movie Countdown React App
+# MCU (Marvel Cinematic Universe) Countdown React App
 
 https://mcucountdown.netlify.app/
 
